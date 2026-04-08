@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5x5 빙고 보드</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+</head>
+<body>
+
+    <h1>빙고 보드 메이커</h1>
+
+    <div id="setup" class="setup-container">
+        <div class="size-selector">
+            <p>보드 크기 선택:</p>
+            <button class="size-btn" data-size="3">3x3</button>
+            <button class="size-btn active" data-size="4">4x4</button>
+            <button class="size-btn" data-size="5">5x5</button>
+        </div>
+        <div class="title-input-group">
+            <input type="text" id="board-title-input" placeholder="빙고 보드 제목을 입력하세요 (예: 먹킷리스트)">
+        </div>
+        <div id="input-grid" class="grid setup-grid"></div>
+        <button id="generate-btn" style="margin-top: 20px;">보드 생성 및 공유 링크 만들기</button>
+    </div>
+
+    <div id="board-area" class="board-container hidden">
+        <div id="capture-area" style="background-color: white; padding: 20px; border-radius: 12px;">
+            <h2 id="board-title-display" style="margin-top: 0; color: #1a73e8;"></h2>
+            <div id="bingo-grid" class="grid" style="background-color: white; border-radius: 8px;"></div>
+        </div>
+        <div class="share-link">
+            <span>공유 링크:</span>
+            <a id="share-url" href="#" target="_blank"></a>
+            <button id="copy-btn" class="copy-btn">링크 복사하기</button>
+        </div>
+        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+            <button id="download-btn" style="background-color: #fbbc05;">이미지로 저장</button>
+            <button id="reset-btn" style="background-color: #6c757d;">새 보드 만들기</button>
+        </div>
+    </div>
+
+    <footer class="copyright">© Undslay, 2026</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
