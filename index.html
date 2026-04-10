@@ -33,20 +33,20 @@
             <input type="text" id="board-title-input" placeholder="빙고 보드 제목을 입력하세요 (예: 먹킷리스트)">
         </div>
         <div id="input-grid" class="grid setup-grid"></div>
-        <button id="generate-btn" style="margin-top: 20px;">보드 생성 및 공유 링크 만들기</button>
+        <button id="generate-btn">보드 생성 및 공유 링크 만들기</button>
     </div>
 
     <div id="board-area" class="board-container hidden">
-        <div id="capture-area" style="background-color: white; padding: 20px; border-radius: 12px;">
+        <div id="capture-area">
             <h2 id="board-title-display" style="margin-top: 0; color: #1a73e8;"></h2>
-            <div id="bingo-grid" class="grid" style="background-color: white; border-radius: 8px;"></div>
+            <div id="bingo-grid" class="grid"></div>
         </div>
         <div class="share-link">
             <span>공유 링크:</span>
             <a id="share-url" href="#" target="_blank"></a>
             <button id="copy-btn" class="copy-btn">링크 복사하기</button>
         </div>
-        <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+        <div class="button-group">
             <button id="download-btn" style="background-color: #fbbc05;">이미지로 저장</button>
             <button id="reset-btn" style="background-color: #6c757d;">새 보드 만들기</button>
         </div>

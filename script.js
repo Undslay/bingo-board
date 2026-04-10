@@ -1,7 +1,7 @@
 $(document).ready(function() {
     const urlParams = new URLSearchParams(window.location.search);
     const bingoData = urlParams.get('b'); // Base64 encoded JSON data
-    let currentSize = 4; // 기본값 4x4
+    let currentSize = 4; // 기본값 3x3
 
     // lz-string을 이용한 압축 및 URL-safe 인코딩
     function compressData(str) {
